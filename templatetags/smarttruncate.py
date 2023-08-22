@@ -1,5 +1,4 @@
 __author__ = 'pedroserrudo'
-__contanct__ = 'pedro@makeitdigital.io'
 from django import template
 from django.template.defaultfilters import stringfilter
 
