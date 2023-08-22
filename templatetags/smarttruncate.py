@@ -12,11 +12,11 @@ def smartcut(value, arg):
 	
     usage: description|smartcut:"20:30"
 
-    'this is a string text that will become smart truncated'|smartcut:'20:30'  will become to
-    'this is a string text that...'
+    'This is a string text that will become smart truncated'|smartcut:'20:30'  will become to
+    'This is a string text that...'
 
     normal truncate with 20 chars will cut the word in half
-    'this is a string tex...'
+    'This is a string tex...'
     """
 
     els = map(int, arg.split(':'))
@@ -25,14 +25,14 @@ def smartcut(value, arg):
     if len(value) <= end:
         return value
 
-    ocurrence = value[start:end].find(" ")
+    occurrence = value[start:end].find(" ")
 
-    if ocurrence:
+    if occurrence:
         for pos in range(start, len(value)):
             if value[pos] == " " and pos < end:
-                ocurrence = pos
+                occurrence = pos
 
-        value = value[0:ocurrence] + "..."
+        value = value[0:occurrence] + "..."
 
     return value
 
