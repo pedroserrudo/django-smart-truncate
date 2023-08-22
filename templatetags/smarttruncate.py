@@ -7,7 +7,7 @@ register = template.Library()
 
 @register.filter
 @stringfilter
-def smartcut(value, arg):
+def smartcut(value:str, arg) -> str:
     """
 	
     usage: description|smartcut:"20:30"
